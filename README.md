@@ -1,2 +1,0 @@
-# shivbhosale.github.io
-Portfolio
