@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://shivbhosale.github.io/",
   "dependencies": {
+    "animated-scroll-to": "^2.0.2",
     "antd": "^3.23.4",
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
