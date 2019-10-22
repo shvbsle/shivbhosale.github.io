@@ -49,7 +49,7 @@ export class BlogDrawer extends React.Component {
                     <center>
                     <Typography.Title level={4}>In the mean time</Typography.Title>
                     <ul>
-                        <li><div><Icon type="robot"></Icon> Check out my Twitter <a href="https://twitter.com/artstylebot">AI Bot</a> till then!</div></li>
+                        <li><div><Icon type="robot"></Icon> Check out my Twitter <a href="https://twitter.com/artstylebot" target="_blank">AI Bot</a> till then!</div></li>
                         <li><div>Click on the background pattern for an easter egg!</div></li>
                     </ul>
                     </center>
