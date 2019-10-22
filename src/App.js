@@ -11,6 +11,7 @@ import {
 } from 'antd';
 import Triangulation from './activities/vaporTriangulation'
 import AboutMe from './activities/aboutMe'
+import {BlogDrawer} from './activities/blogDrawer'
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
           }}
         >SHIV.</Typography.Title>
         <div>
+          
           <Popover type="primary" content={<div><center><Icon type="lock" /> Under construction.</center> <br></br>Check out my Twitter <a href="https://twitter.com/artstylebot">AI bot</a> till then.</div>}>
-            <Icon style={{ color: 'white' }} type="book"></Icon><a style={{ marginLeft: '10px' }} href="#">blog</a>
+            <BlogDrawer/>
           </Popover>
           <Divider type="vertical" />
           <Icon style={{ color: 'white' }} type="github"></Icon><a style={{ marginLeft: '10px' }} href="https://github.com/ShivBhosale">github</a>
