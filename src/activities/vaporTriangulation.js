@@ -299,6 +299,7 @@ export default class Triangulation extends React.Component {
                                 showGutter={true}
                                 highlightActiveLine={true}
                                 value={source_code_str}
+                                readOnly={true}
                                 setOptions={{
                                     enableBasicAutocompletion: false,
                                     enableLiveAutocompletion: false,
