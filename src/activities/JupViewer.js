@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Card, Spin,
     Tag, Col, Row, Typography,
-    Switch
+    Switch, Icon
 } from 'antd';
 import { render } from "react-dom";
 import AceEditor from "react-ace";
@@ -65,7 +65,7 @@ class JupViewer extends React.Component {
                             loading: false,
                             placeholder_component: 'Notebook loaded'
                         })
-                        console.log(this.state.notebook_json)
+                        // console.log(this.state.notebook_json)
                     } catch (error) {
                         alert('OOps! Unable to load json')
                         this.setState({
@@ -299,7 +299,7 @@ class JupViewer extends React.Component {
                 background_output_theme: '#F1F1F2',
             })
         }
-        console.log(`switch to ${ev}`);
+        // console.log(`switch to ${ev}`);
     }
 
     gutterChanger(ev) {
@@ -316,7 +316,7 @@ class JupViewer extends React.Component {
     }
 
     render() {
-        console.log(this.props.file)
+        // console.log(this.props.file)
         return (
             <div>
                 <br></br>
@@ -537,6 +537,12 @@ class JupViewer extends React.Component {
                         }
                     </center>
                 </Spin>
+                <br></br>
+                <br></br>
+                <div style={{color:'white'}}>
+                        Wanna use this notebook viewer? Star it on my <a href="https://github.com/ShivBhosale/React-Jupyter-Viewer" target="_blank">Github! <Icon type="github"/> </a>
+                </div>
+                <br></br>
                 <br></br>
             </div>
         )

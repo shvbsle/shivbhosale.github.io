@@ -1,10 +1,11 @@
 {
-    "blogs":[
-        {
+    "blog_keys":{
+        "RecursionForDummies":{
             "title":"Recursion for Dummies",
             "cover_img_url":"https://pbs.twimg.com/media/DnT_X9qXgAYyTOz.jpg",
             "subtitle":"Recursion for those who don't understand it",
-            "nb_url":"https://raw.githubusercontent.com/jakevdp/PythonDataScienceHandbook/master/notebooks/00.00-Preface.ipynb"
+            "nb_url":"https://raw.githubusercontent.com/ShivBhosale/blgs/master/notebooks/RecursionForDummies.ipynb",
+            "tags":["algorithms", "math"]
         }
-    ]
+    }
 }
