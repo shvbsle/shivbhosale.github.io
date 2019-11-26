@@ -43,7 +43,7 @@ export class BlogViewer extends React.Component {
     };
 
 
-    componentWillMount(newProps) {
+    componentDidMount(newProps) {
         const parsedParams = this.parseURLParams(window.location.href);
         if (!!parsedParams) {
             if (('id' in parsedParams)) {
