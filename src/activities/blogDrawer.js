@@ -4,6 +4,8 @@ import {
     Result, Card,
     Typography, Tag, Spin, message
 } from 'antd';
+import { Link} from 'react-router-dom'
+
 import JupViewer from './JupViewer'
 const blogConfig = require('./blogConfig.json')
 // console.log(blogConfig)
@@ -182,8 +184,9 @@ export class BlogDrawer extends React.Component {
                         Object.keys(blogConfig['blog_keys']).map(item => (
                             <Card
                                 onClick={() => {
-                                    window.history.pushState('page2', 'Shiv 200', '/?id='+item);
-                                    this.openBlogDrawer.bind(this)(blogConfig['blog_keys'][item])
+                                    // window.history.pushState('page2', 'Shiv 200', '/#b/?id='+item);
+                                    // this.openBlogDrawer.bind(this)(blogConfig['blog_keys'][item])
+                                    window.open(window.origin + '/#b/?id='+item)
                                 }}
                                 // onClick={()=>{window.location = window.location.origin+"/n?id="+item}}
                                 hoverable

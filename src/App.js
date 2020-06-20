@@ -3,7 +3,7 @@ import animateScrollTo from 'animated-scroll-to';
 
 import logo from './logo.svg';
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, HashRouter, Link} from 'react-router-dom'
 import {
   Tabs, Icon, Carousel, Card, Row, Col, Collapse,
   Button, Modal, TreeSelect, Divider, Typography, Popover,
@@ -17,11 +17,11 @@ import {BlogViewer} from './activities/blogViewer'
 
 function App() {
   return (
-    <Switch>
+    <HashRouter basename="/">
       <Route exact path="/" component={Landing} />
-      <Route exact path="/n" component={BlogViewer} />
-      <Route component={Landing} />
-    </Switch>
+      <Route path="/b" component={BlogViewer} />
+      {/* <Route component={Landing} /> */}
+    </HashRouter>
   );
 }
 

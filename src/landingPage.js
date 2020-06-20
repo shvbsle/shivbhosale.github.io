@@ -26,7 +26,8 @@ function Landing() {
           }}
         >SHIV.</Typography.Title>
         <div>
-            <BlogDrawer/>
+
+        <BlogDrawer />
           <Divider type="vertical" />
           <Icon style={{ color: 'white' }} type="github"></Icon><a style={{ marginLeft: '10px' }} href="https://github.com/ShivBhosale" target="_blank">github</a>
           <Divider type="vertical" />

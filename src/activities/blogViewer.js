@@ -5,6 +5,7 @@ import {
     Typography, Tag, Spin, Divider
 } from 'antd';
 import JupViewer from './JupViewer'
+import { BlogDrawer } from './blogDrawer'
 const blogConfig = require('./blogConfig.json')
 // console.log(blogConfig)
 const { Meta } = Card;
@@ -45,6 +46,7 @@ export class BlogViewer extends React.Component {
 
     componentDidMount(newProps) {
         const parsedParams = this.parseURLParams(window.location.href);
+        console.log(parsedParams)
         if (!!parsedParams) {
             if (('id' in parsedParams)) {
                 if (parsedParams['id'] in blogConfig['blog_keys']) {
@@ -103,12 +105,12 @@ export class BlogViewer extends React.Component {
 
     parseURLParams(url) {
         var queryStart = url.indexOf("?") + 1,
-            queryEnd = url.indexOf("#") + 1 || url.length + 1,
+            queryEnd = url.length + 1,
             query = url.slice(queryStart, queryEnd - 1),
             pairs = query.replace(/\+/g, " ").split("&"),
             parms = {}, i, n, v, nv;
 
-        if (query === url || query === "") return;
+        if (query === url || query === "" || query + "#/b" === url) return;
 
         for (i = 0; i < pairs.length; i++) {
             nv = pairs[i].split("=", 2);
@@ -126,7 +128,10 @@ export class BlogViewer extends React.Component {
             <div>
                 <center>
                     <br></br>
-                    <Button type="primary" icon="home" onClick={() => { window.location = window.location.origin }}>Home</Button>
+                    <Icon style={{ color: 'white' }} type="home"></Icon>
+                    <a style={{ marginLeft: '10px' }} type="primary" onClick={() => { window.location = window.location.origin }}>
+                        Home
+                    </a>
 
                     {this.state.nb_view}
                 </center>
