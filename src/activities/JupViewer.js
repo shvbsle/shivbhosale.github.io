@@ -319,9 +319,21 @@ class JupViewer extends React.Component {
         // console.log(this.props.file)
         return (
             <div>
-                <br></br>
                 <Spin spinning={this.state.loading} >
                     <center>
+                        <div
+                        style={{
+                            marginBottom:'5px'
+                        }}>
+                        <a 
+                        onClick={() => {
+                            const url = new URL(window.location);
+                            url.searchParams.set('view', 'blog');
+                            url.searchParams.delete('id');
+                            window.history.pushState({}, '', url);
+                            window.location.reload();
+                        }}>[x] close</a>
+                        </div>
                         {/* This is where the blog metadata and the cover will go */}
                         <div class={this.state.ed_theme}>
                             <Card
@@ -537,13 +549,6 @@ class JupViewer extends React.Component {
                         }
                     </center>
                 </Spin>
-                <br></br>
-                <br></br>
-                <div style={{color:'white'}}>
-                        Wanna use this notebook viewer? Star it on my <a href="https://github.com/ShivBhosale/React-Jupyter-Viewer" target="_blank">Github! <Icon type="github"/> </a>
-                </div>
-                <br></br>
-                <br></br>
             </div>
         )
     }

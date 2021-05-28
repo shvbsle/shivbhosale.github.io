@@ -6,6 +6,7 @@ import {
 } from 'antd';
 import JupViewer from './JupViewer'
 import { BlogDrawer } from './blogDrawer'
+import {BlogList} from './blogList'
 const blogConfig = require('./blogConfig.json')
 // console.log(blogConfig)
 const { Meta } = Card;
@@ -79,10 +80,7 @@ export class BlogViewer extends React.Component {
                 this.setState({
                     nb_view: (
                         <center>
-                            <Result
-                                icon={<Icon type="frown" theme="twoTone" />}
-                                title={<div style={{ 'color': 'white' }}>Oops! No Notebook on this URL!</div>}
-                            />
+                            <BlogList/>
                         </center>)
                 })
             }
@@ -127,12 +125,6 @@ export class BlogViewer extends React.Component {
         return (
             <div>
                 <center>
-                    <br></br>
-                    <Icon style={{ color: 'white' }} type="home"></Icon>
-                    <a style={{ marginLeft: '10px' }} type="primary" onClick={() => { window.location = window.location.origin }}>
-                        Home
-                    </a>
-
                     {this.state.nb_view}
                 </center>
             </div>
